@@ -1,0 +1,3 @@
+# Unit tests directory. Add test projects here.
+# Recommended: xUnit + FluentAssertions
+# Example: dotnet new xunit -n GameTranslator.Tests -o tests/GameTranslator.Tests
