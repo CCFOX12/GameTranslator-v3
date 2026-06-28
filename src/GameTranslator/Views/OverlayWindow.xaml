@@ -1,0 +1,19 @@
+<Window x:Class="GameTranslator.Views.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ShowInTaskbar="False" Topmost="True" ResizeMode="NoResize">
+    <Grid>
+        <Border x:Name="SelectionMask" Background="#44000000" Visibility="Collapsed"
+                MouseLeftButtonDown="SelectionMask_MouseDown" MouseMove="SelectionMask_MouseMove" MouseLeftButtonUp="SelectionMask_MouseUp" />
+        <Canvas x:Name="SelectionCanvas" Visibility="Collapsed" />
+        <Canvas x:Name="OverlayCanvas" />
+        <Border x:Name="StatusBar" Background="#CC000000" CornerRadius="6" Padding="8,4"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20">
+            <StackPanel Orientation="Horizontal">
+                <Ellipse x:Name="StatusDot" Width="8" Height="8" Fill="#FF5555" Margin="0,0,6,0" VerticalAlignment="Center" />
+                <TextBlock x:Name="StatusText" Text="翻译已停止" Foreground="#CCCCCC" FontSize="13" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
